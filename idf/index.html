@@ -147,12 +147,12 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/psyai-net/D-IF_release"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code(comming soon)</span>
+                  <span>Code</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
@@ -287,20 +287,15 @@
         <div class="content has-text-justified">
           <img src="./static/videos/1.png" alt="Italian Trulli">
           <p>
-            In this paper, we propose the novel neural implicit distribution fields and 
-            detailed clothed human reconstruction method to enhance the performance of 
+            In this paper, we propose the novel neural implicit distribution fields to enhance the performance of 
             clothed human reconstruction. 
           </p>
           <p>
             Rather than regressing the implicit field of a 
-            clothed mesh directly, we contend that sampling the implicit value from a 
+            clothed mesh directly, sampling the implicit value (coarse occupancy) from a 
             distribution predicted by a neural network can endow the model with both accuracy 
-            and uncertainty. Specifically, we extract pixel-aligned features from the 
-            input human photo to forecast the distribution of occupancy values for a 
-            query point in <img style="background: white;" src="./static/images/image.svg", width="23", height="23"> using a multi-layer perceptron (MLP). We then
-             derive a coarse occupancy field by point-wise sampling occupancy values 
-             from the predicted distributions. Subsequently, the Occupancy Rectifier, an 
-             additional MLP, refines the coarse occupancy field. The final clothed mesh is
+            and uncertainty. Subsequently, the Occupancy Rectifier, an 
+            additional MLP, refines the coarse occupancy field. The final clothed mesh is
             obtained by setting the level set of the rectified occupancy field to 0.5.
           </p>  
         </div>
@@ -322,7 +317,7 @@
   </div>
 </section>
 
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -334,7 +329,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- <section class="section">-->
   <div class="container is-max-desktop">
