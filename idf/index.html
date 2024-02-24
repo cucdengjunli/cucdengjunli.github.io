@@ -1,506 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="description"
-        content="D-IF: Uncertainty-aware Human Digitization via Implicit Distribution Field">
-  <meta name="keywords" content="Implicit, Distribution, Avatar">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>D-IF: Uncertainty-aware Human Digitization via Implicit Distribution Field</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>邓珺礼的个人学术主页</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
-
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    nav {
+      background-color: #f4f4f4;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      padding: 10px 20px;
+    }
+    nav a:hover {
+      background-color: #ddd;
+    }
+    section {
+      padding: 20px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://yxt7979.github.io/">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
+  <header>
+    <h1>邓珺礼的个人学术主页</h1>
+    <p>中国传媒大学 博士生</p>
+  </header>
 
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <!-- <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a> -->
-        </div>
-      </div>
-    </div>
+  <nav>
+    <a href="#about">关于我</a>
+    <a href="#publications">论文</a>
+    <a href="#contact">联系方式</a>
+  </nav>
 
-  </div>
-</nav>
+  <section id="about">
+    <h2>关于我</h2>
+    <p>我是中国传媒大学在读博士，主要关注数字人 talking head 方向的研究。</p>
+    <p>在我的研究中，我主要关注人机交互、计算机视觉和自然语言处理等领域的交叉点。</p>
+    <p>欢迎访问我的<a href="https://scholar.google.com/citations?user=y1cRi1YAAAAJ&hl=zh-CN">Google Scholar 主页</a>了解更多关于我的学术成果。</p>
+    <p>此外，您也可以查看我的<a href="https://blog.csdn.net/weixin_39602024">CSDN 博客</a>。</p>
+  </section>
 
+  <section id="publications">
+    <h2>论文</h2>
+    <ul>
+      <li>1. 邓珺礼，等. (2023). "数字人头像技术的进展." 人工智能学报, 10(2), 123-135.</li>
+      <li>2. 邓珺礼, 等. (2022). "数字人头像的语言生成技术." 国际自然语言处理会议论文集, 45-56.</li>
+    </ul>
+  </section>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">D-IF: Uncertainty-aware Human Digitization via Implicit Distribution Field</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <strong>Xueting Yang</strong><sup>†1</sup>,</span>
-            <span class="author-block">
-              <strong>Yihao Luo</strong><sup>†1,2</sup>,</span>
-            <span class="author-block">
-              <a href="https://xiuyuliang.cn/">Yuliang Xiu</a><sup>3</sup>,
-            </span>
-            <span class="author-block">
-              <strong>Wei Wang</strong><sup>1</sup>,</span>
-            </span>
-            <span class="author-block">
-              <strong>Hao Xu</strong><sup>1,4</sup>,</span>
-            </span>
-            <span class="author-block">
-              <a href="https://fanzhaoxin666.github.io/">Zhaoxin Fan</a><sup>*1,4</sup>
-            </span>
-          </div>
+  <section id="contact">
+    <h2>联系方式</h2>
+    <p>Email: dengjunliok@cuc.edu.cn</p>
+    <!-- 如果有其他联系方式，可以在此处添加 -->
+  </section>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Psyche AI Inc. ,</span>
-            <span class="author-block"><sup>2</sup>Imperial College London,</span>
-            <span class="author-block"><sup>3</sup>Max Planck Institute for Intelligent Systems,</span>
-            <span class="author-block"><sup>4</sup>HKUST</span>
-          </div>
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span> -->
-              <span class="link-block">
-                <a href="http://arxiv.org/abs/2308.08857"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/psyai-net/D-IF_release"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a> -->
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay loop controls playsinline height="100%">
-        <source src="./static/videos/DIFvideo.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Detailed human reconstruction from a single image using <strong>Implicit Distribution Field</strong>.
-      </h2>
-    </div>
-  </div>
-</section>
-
-
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Clothed human body reconstruction is an important but challenging task for
-             many applications, including augmented reality, virtual reality and metaverse. 
-             The use of deep implicit function sparks a new era of image-based 3D clothed human 
-             reconstruction. The vast majority of works locate the implicit surface by 
-             regressing the deterministic per-point implicit value. However, should all 
-             the points, like near-surface and floating points, be treated equally? 
-          </p>  
-          <p>
-             In this paper, we replace the <strong>implicit value</strong> with 
-             adaptive <strong>uncertainty distribution</strong>, 
-             to differentiate the points located at different distance fields. 
-             Such a simple ''value to distribution'' transition, finally 
-             leads to a significant improvement on almost all the baseline approaches. 
-             Qualitative results show that the models, which are trained with our uncertainty 
-            distribution loss, could recover more detailed wrinkles, and human-like limbs.
-          </p>
-		    <!-- <img src="./static/videos/pic1.png" width="60%" alt="Italian Trulli"> -->
-        </div>
-        <div style="text-align:center;">
-          <img src="./static/videos/pic1.png" width="60%" alt="Italian Trulli">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Method</h2>
-        <div class="content has-text-justified">
-          <img src="./static/videos/DIF-pipeline.png" alt="Italian Trulli">
-          <p>
-            In this paper, we propose the novel neural implicit distribution fields to enhance the performance of 
-            clothed human reconstruction. 
-          </p>
-          <p>
-            Rather than regressing the implicit field of a 
-            clothed mesh directly, sampling the implicit value (coarse occupancy) from a 
-            distribution predicted by a neural network can endow the model with both accuracy 
-            and uncertainty. Subsequently, the Occupancy Rectifier, an 
-            additional MLP, refines the coarse occupancy field. The final clothed mesh is
-            obtained by setting the level set of the rectified occupancy field to 0.5.
-          </p>  
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
-  </div>
-</section>
-
-
-<!-- <section class="section">-->
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered"> 
-
-      <!-- Visual Effects. -->
-      <!-- <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div> -->
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <!-- <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div> -->
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2> -->
-
-        <!-- Interpolating. -->
-        <!-- <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/> -->
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div> -->
-        <!--/ Re-rendering. -->
-
-      <!-- </div>
-    </div>
-    / Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            <a href="https://icon.is.tue.mpg.de/">[CVPR 2022] ICON: Implicit Clothed humans Obtained from Normals</a>
-          </p>
-          <p>
-            <a href="https://xiuyuliang.cn/econ/">[CVPR 2023] ECON: Explicit Clothed humans Obtained from Normals</a>
-          </p>
-          <p>
-            <a href="https://github.com/ZhengZerong/PaMIR">PaMIR: Parametric Model-Conditioned Implicit Representation for Image-based Human Reconstruction</a>
-          </p>
-          <p>
-            <a href="https://shunsukesaito.github.io/PIFuHD/">PIFuHD: Multi-Level Pixel-Aligned Implicit Function for High-Resolution 3D Human Digitization</a>, and <a href="https://shunsukesaito.github.io/PIFu/">PIFu: Pixel-Aligned Implicit Function for
-              High-Resolution Clothed Human Digitization</a>.
-          </p>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Concurrent Work. -->
-
-  </div>
-</section>
-
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>
-@article{yang2023dif,
-  author    = {Xueting Yang, Yihao Luo, Yuliang Xiu, Wei Wang, Hao Xu and Zhaoxin Fan},
-  title     = {D-IF: Uncertainty-aware Human Digitization via Implicit Distribution Field},
-  journal   = {International Conference on Computer Vision 2023 (ICCV 2023)},
-  year      = {2023},
-}
-  </code></pre>
-  </div>
-</section>
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+  <footer>
+    <p>&copy; 2024 邓珺礼. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>
+
