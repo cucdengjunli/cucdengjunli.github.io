@@ -10,6 +10,9 @@
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -150,7 +153,7 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/psyai-net/D-IF_release"
+                <a href="https://cucdengjunli.github.io/idf/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -176,6 +179,11 @@
   </div>
 </section>
 
+<p class="has-text-centered">
+  We will release our paper and code upon acceptance. We extend our gratitude to Wei Wang for assisting us in data collection.
+</p>
+
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -184,7 +192,7 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Detailed human reconstruction from a single image using <strong>Implicit Distribution Field</strong>.
+        Audio-Driven Lip Synthesis via <strong>Local Affine Warping Deformation</strong>.
       </h2>
     </div>
   </div>
@@ -262,7 +270,7 @@
 		    <!-- <img src="./static/videos/pic1.png" width="60%" alt="Italian Trulli"> -->
         </div>
         <div style="text-align:center;">
-          <img src="./static/videos/pic1.png" width="60%" alt="Italian Trulli">
+          <img src="./static/videos/lawdnet-任务示意图(2).png" width="100%" alt="Italian Trulli">
         </div>
       </div>
     </div>
@@ -276,19 +284,10 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Method</h2>
         <div class="content has-text-justified">
-          <img src="./static/videos/DIF-pipeline.png" alt="Italian Trulli">
+          <img src="./static/videos/杨雪婷-lawnet总框图_新(2).png" alt="Italian Trulli">
           <p>
-            In this paper, we propose the novel neural implicit distribution fields to enhance the performance of 
-            clothed human reconstruction. 
-          </p>
-          <p>
-            Rather than regressing the implicit field of a 
-            clothed mesh directly, sampling the implicit value (coarse occupancy) from a 
-            distribution predicted by a neural network can endow the model with both accuracy 
-            and uncertainty. Subsequently, the Occupancy Rectifier, an 
-            additional MLP, refines the coarse occupancy field. The final clothed mesh is
-            obtained by setting the level set of the rectified occupancy field to 0.5.
-          </p>  
+            Overview of the LawDNet framework. The data preprocessing stage prepares the model inputs through face frontalization and soft masking. Feature modulation is driven by audio and visual cues to learn keypoint locations, radii, and affine parameters, leading to the deformation of the coarse-grained grid. These deformations are then mapped onto feature maps, and the warped feature maps are processed by the generator \(G\) to produce accurate lip-synced images. Backward propagation leverages dual discriminators \(D_T\) and \(D_S\), alongside multi-level loss functions, to refine the training of \(G\).
+          </p>          
         </div>
       </div>
     </div>
@@ -443,7 +442,7 @@
 </section>
 
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
@@ -455,7 +454,7 @@
 }
   </code></pre>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
