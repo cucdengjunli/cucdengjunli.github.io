@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="WGS: Wasserstein Gaussian Splatting for Dynamic Scene Rendering">
+  <meta name="keywords" content="Dynamic Scene Rendering, Gaussian Splatting, Wasserstein Geometry">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WGS: Wasserstein Gaussian Splatting for Dynamic Scene Rendering</title>
+
+  <!-- Include CSS and JS files -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://cucdengjunli.github.io/">
+        <span class="icon">
+          <i class="fas fa-home"></i>
+        </span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">WGS: Wasserstein Gaussian Splatting for Dynamic Scene Rendering</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/cucdengjunli" target="_blank" class="author-link"><strong>Junli Deng</strong><sup>2*</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/Luo-Yihao" target="_blank" class="author-link"><strong>Yihao Luo</strong><sup>1*</sup></a>
+            </span>
+          </div>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Communication University of China,</span>
+            <span class="author-block"><sup>2</sup>Imperial College London</span>
+            <span class="author-block"><sup>*</sup>Equal Contribution</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Add links to the paper, code, etc. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2412.00333"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/Luo-Yihao/WassersteinGS"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <img src="./images/Demo_WGS.png" alt="WGS Demo" width="100%">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Dynamic scene rendering has taken a leap forward with the rise of 4D Gaussian Splatting, but there's still one elusive challenge: how to make 3D Gaussians move through time as naturally as they would in the real world, all while keeping the motion smooth and consistent. In this paper, we unveil a fresh approach that blends state-space modeling with Wasserstein geometry, paving the way for a more fluid and coherent representation of dynamic scenes.
+          </p>
+          <p>
+            We introduce a State Consistency Filter that merges prior predictions with the current observations, enabling Gaussians to stay true to their way over time. We also employ Wasserstein distance regularization to ensure smooth, consistent updates of Gaussian parameters, reducing motion artifacts. Lastly, we leverage Wasserstein geometry to capture both translational motion and shape deformations, creating a more physically plausible model for dynamic scenes.
+          </p>
+          <p>
+            Our approach guides Gaussians along their natural way in the Wasserstein space, achieving smoother, more realistic motion and stronger temporal coherence.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <img src="./images/4dgs-main_figure_00.png" alt="Method Details" width="100%">
+          <p>
+            Our framework integrates three key components for dynamic scene rendering. First, a state-space updating mechanism with neural Gaussian deformation estimates motion patterns. Second, Wasserstein distance regularization ensures smooth parameter updates. Third, we model Gaussian dynamics under Wasserstein geometry for accurate motion prediction with intrinsic physical plausibility.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Demonstration Videos</h2>
+    <div class="columns is-multiline">
+      <div class="column is-half">
+        <video controls playsinline style="width: 100%;">
+          <source src="./videos/dynerf-demo_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="has-text-centered">dynerf</p>
+      </div>
+      <div class="column is-half">
+        <video controls playsinline style="width: 100%;">
+          <source src="./videos/d-nerf_demo_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="has-text-centered">dnerf</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/Luo-Yihao/WassersteinGS" class="external-link">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
